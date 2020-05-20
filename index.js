@@ -10,7 +10,7 @@ const app = express()
 const port = argv.port || 3000
 const log = console.log
 
-if (!argv.url) {
+if (argv.open) {
   app.use(cors())
 
   app.use(bodyParser.urlencoded({ extended: false }))
@@ -22,8 +22,13 @@ if (!argv.url) {
     console.log(`open the door at port ${chalk.blue(port)} 
 power by ${chalk.red('Noob Studio')}`)
   })
-} else {
+} else if(argv.url) {
   sendRequest()
+}else {
+  log(`Invalid argv please use 
+    --open to start server
+    --port to specific port
+    --url to use as cli`)
 }
 
 function sendRequest (req = null, res = null) {

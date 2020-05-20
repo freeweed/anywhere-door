@@ -11,7 +11,7 @@ npm install anywhere-door -g
 ## Usage
 ### Use as server
 ```
-door
+door --open
 ```
 you can also use `--port` to specific port default is `3000`, now use can go anywhere you want by pass query string `url`.
 
