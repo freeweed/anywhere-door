@@ -1,0 +1,32 @@
+{
+  "name": "door",
+  "version": "1.0.0",
+  "description": "node package for simulate cors origin server in your localhost ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "standard && nodemon index.js --port 3001",
+    "fix": "npx standard --fix"
+  },
+  "keywords": [
+    "cors", "express", "connect"
+  ],
+  "author": "freeweed",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chalk": "^4.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mocha": "^7.1.2",
+    "request": "^2.88.2",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "standard": "*"
+  },
+  "bin": {
+    "door": "./index.js"
+  }
+}
